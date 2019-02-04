@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>pagina de inicio</title>
+<style>
+
+#contenedor {
+	margin-top: 50px;
+	width: 50%;
+	margin-left: 250px;
+	font-size: 30px;
+	font-family: "century gothic";
+	color: #CC9900;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	z-index: 100;
+	left: 200px;	
+}
+
+#nuevo_juego p{
+	height:70px;
+background-color:#3747D9;
+font-size:36px;
+font-family: "century gothic";
+color:#CC0;
+border-radius:30px;	
+}
+
+#opciones p{
+	height:70px;
+background-color:#3747D9;
+font-size:36px;
+font-family: "century gothic";
+color:#CC0;
+border-radius:30px;			
+}
+#online p{
+	height:70px;
+background-color:#3747D9;
+font-size:36px;
+font-family: "century gothic";
+color:#CC0;
+border-radius:30px;			
+}
+
+#nav ul li{
+	background-color:#FFBF55;
+list-style:none;
+display:inline;
+padding:3px 20px 3px 20px;
+font-family: "century gothic";
+border:solid;
+border-color:#FF9;
+
+	
+}
+ #nav a{
+text-decoration: underline;
+color:#2A1FAA;
+cursor:pointer;
+ }
+#nav{
+margin-left:450px;
+font-family:"century gothic";
+color:#C90;	
+}
+#menu{
+width:105px;
+height:600px;
+top:130px;
+left:-125px;
+background-color:#3747D9;
+padding:20px 20px 0 20px;
+position:absolute;
+color:#FFBF55;
+z-index:100;	
+}
+
+#contenedor tr td{
+text-decoration:underline;
+cursor:pointer;
+font-size:24px;
+border:thin;
+border-style:solid;
+
+}
+#menu img{
+margin-bottom:20px;
+border: 1px solid rgb(0,0,0);	
+}
+#reproductor{
+margin-top:120px;	
+}
+audio{
+width:80px;	
+
+}
+#portada img{
+width:250px;
+height:420px;
+top:160px;
+left:1025px;
+opacity:0.8;
+padding:20px 20px 0 20px;
+position:absolute;
+border:thin;
+border-style:solid;
+z-index:100;	
+}
+#cabecera{
+width:100%;
+height:120px;
+border:thin;
+border-style:solid;	
+}
+#cabecera p{
+font-family:"century gothic";
+text-decoration:underline;
+font-size:18px;
+color:#FFF;
+}
+ ul li a:hover{
+list-style:none;
+display:inline;
+padding:3px 20px 3px 20px;
+}
+#image1{
+
+}
+
+</style>
+        <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css">
+       <script src="Jquery/jquery-1.6.3.min.js"></script>
+       <script src="Jquery/jquery.easing.1.3.js"></script>
+       <script src="fancybox/jquery.fancybox-1.3.4.js"></script>
+        <script >
+$(document).ready(function(){
+	
+ $("#contenedor").hide();//cerrar el mensaje de congratulation 
+ $("#contenedor").fadeIn(5000);	 
+ $("#menu").hover(function(){
+	$(this).stop().animate({
+		left:"0px"},500)
+ },
+ function(){
+	$(this).stop().animate({
+		left:"-125px"},1500);
+	 
+ });
+    
+});
+
+        </script>
+        <script>
+       $(document).ready(function() {
+       	$("#menu a").fancybox({
+	overlayColor:"#797e97",
+	overlayOpacity:.6,
+	easingIn:"easeInSine",
+	transitionIn:"elastic",
+	transitionOut:"elastic",
+	
+	titlePosition:"Outside",
+	cyclic:true,
+	
+}); 
+$("#nav").hover(function(){
+	$("#lista1").addClass("resaltar")
+	
+	},function(){
+	$(this).removeClass("resaltar")
+		
+		});
+    });
+
+
+        </script>
+</head>
+
+<body>
+<div id="cabecera"><h2>Sopa de Letras</h2><p>gamesmugiwara.com</p>
+    <div id="nav">
+                <ul>
+                    <li> <a href="pagina_inicio.html" id="lista1">Home</a></li>
+                    <li> <a href="#">JuegosGratis.com</a></li>
+                    <li> <a href="#">Login</a></li>	
+                    <li> <a href="#">Registrate</a></li>	
+
+                </ul>
+
+            </div>
+</div>
+
+<div id="contenedor" >
+<table width="612" >
+<tr>
+<td width="604"  id="nuevo_juego"><a href="sopa_de_letras.html"><p>Nuevo Juego</p></a></td>
+</tr>
+<tr><td id="opciones"><p>Opciones</p></td></tr>
+<tr><td id="online"><p>Juegos Online</p></td></tr>
+
+</table>
+
+</div>
+<div id="menu">
+More games
+<a href="imagenes/tenor.gif" rel="gallery" title="Crash Bandicoot"><img src="imagenes/tenor.gif" width="100" height="100"alt="crash" >
+Crash Bandicoot
+<a href="imagenes/380204.jpg" rel="gallery" title="Pes 2016"><img src="imagenes/380204.jpg" width="100" height="100" alt="Pes">
+Pes 2016
+<a href="imagenes/giphy.gif" rel="gallery" title="Super mario"><img src="imagenes/giphy.gif"  width="100" height="100" alt="luffy">
+Super mario
+<a href="imagenes/one-piece-accion-real.jpg" rel="gallery" title="Tripulacion Mugiwara"><img src="imagenes/one-piece-accion-real.jpg" width="100" height="100"alt="mugiwara" >
+O.P.P.W
+</div>
+
+<div id="reproductor"><audio src="imagenes/ringtones-super-mario-bros.mp3" controls autoplay loop>
+<p>tu navegador no implementa el elemento audio</p>
+</audio></div>
+
+<div id="portada"><img src="imagenes/giphy.gif"id="image1"></div>
+<script>
+$(document).ready(function(){
+ $("#contenedor").fadeIn(5000);
+ //$("#contenedor").fadeOut((2000);   
+});
+        </script>
+
+</body>
+</html>
